@@ -11,13 +11,6 @@ export class Flash {
   public color: Color;
   public power: number;
 
-  constructor(location: Point3D, angle: Angle3D, color: Color, power: number) {
-    this.location = location;
-    this.angle = angle;
-    this.color = color;
-    this.power = power;
-  }
-
   /**
    * Поворот камеры на угол
    * 
