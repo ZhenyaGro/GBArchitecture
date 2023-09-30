@@ -11,6 +11,7 @@
   "include": [
     "src/InMemoryModel/*",
     "src/ModelElements/*",
-    "src/Stuff/*"
+    "src/Stuff/*",
+    "src/seminar2/*"
   ]
 }
