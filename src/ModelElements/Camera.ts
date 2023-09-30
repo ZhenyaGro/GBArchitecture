@@ -5,11 +5,6 @@ export class Camera {
   public location: Point3D;
   public angle: Angle3D;
 
-  constructor(location: Point3D, angle: Angle3D) {
-    this.location = location;
-    this.angle = angle;
-  }
-
   /**
    * Поворот камеры на угол
    * 
