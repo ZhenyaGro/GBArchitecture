@@ -4,6 +4,7 @@ import { PoligonalModel } from "../ModelElements/PoligonalModel";
 import { Scene } from "../ModelElements/Scene";
 import { Flash } from "../ModelElements/Flash";
 import { Camera } from "../ModelElements/Camera";
+import { Texture } from "../ModelElements/Texture";
 
 export class ModelStore implements IModelChanger {
   public models: Array<PoligonalModel>;
@@ -15,10 +16,15 @@ export class ModelStore implements IModelChanger {
   public constructor(changeObservers: IModelChangeObserver[]) {
     this.changeObservers = changeObservers;
 
-    this.models = new Array<PoligonalModel>();
-    this.scenes = new Array<Scene>();
-    this.flashes = new Array<Flash>();
-    this.cameras = new Array<Camera>();
+    const textures = new Array<Texture>();
+
+    this.models = new Array<PoligonalModel>(
+      new PoligonalModel(textures)
+    );
+
+    this.flashes = new Array<Flash>(new Flash());
+    this.cameras = new Array<Camera>(new Camera());
+    this.scenes = new Array<Scene>(new Scene(0, this.models, this.flashes, this.cameras));
   }
 
   public getScena(id: number) {
