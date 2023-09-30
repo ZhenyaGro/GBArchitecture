@@ -8,14 +8,12 @@ export class Flash {
   public angle: Angle3D;
   public color: Color;
   public power: number;
-  public scenes: Array<Scene>;
 
-  constructor(location: Point3D, angle: Angle3D, color: Color, power: number, scenes: Array<Scene>) {
+  constructor(location: Point3D, angle: Angle3D, color: Color, power: number) {
     this.location = location;
     this.angle = angle;
     this.color = color;
     this.power = power;
-    this.scenes = scenes;
   }
 
   public rotate(angle: Angle3D): void { };
