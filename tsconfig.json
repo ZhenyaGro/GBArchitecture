@@ -6,12 +6,9 @@
     "moduleResolution": "Node"
   },
   "files": [
-    "src/index.ts"
+    "src/seminar2/index.ts"
   ],
   "include": [
-    "src/InMemoryModel/*",
-    "src/ModelElements/*",
-    "src/Stuff/*",
     "src/seminar2/*"
   ]
 }
