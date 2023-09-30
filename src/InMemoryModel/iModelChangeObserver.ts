@@ -1,4 +1,4 @@
 // Интерфейс смены наблюдателя
-export interface iModelChangeObserver {
+export interface IModelChangeObserver {
   ApplyUpdateModel(): void; // public
 }

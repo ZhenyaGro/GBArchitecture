@@ -1,4 +1,4 @@
 // Интерфейс смены модели
-export interface iModelChanger {
-  NotifyChange(sender: iModelChanger): void;
+export interface IModelChanger {
+  NotifyChange(sender: IModelChanger): void;
 }

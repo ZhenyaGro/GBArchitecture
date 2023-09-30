@@ -1,24 +1,24 @@
-import { iModelChanger } from "./iModelChanger";
-import { iModelChangeObserver } from "./iModelChangeObserver";
+import { IModelChanger } from "./iModelChanger";
+import { IModelChangeObserver } from "./iModelChangeObserver";
 import { PoligonalModel } from "../ModelElements/PoligonalModel";
 import { Scene } from "../ModelElements/Scene";
 import { Flash } from "../ModelElements/Flash";
 import { Camera } from "../ModelElements/Camera";
 
-export class ModelStore implements iModelChanger {
+export class ModelStore implements IModelChanger {
   public models: Array<PoligonalModel>;
   public scenes: Array<Scene>;
   public flashes: Array<Flash>;
   public cameras: Array<Camera>;
-  private changeObservers: iModelChangeObserver[];
+  private changeObservers: IModelChangeObserver[];
 
-  public constructor(changeObservers: iModelChangeObserver[]) {
+  public constructor(changeObservers: IModelChangeObserver[]) {
     this.changeObservers = changeObservers;
 
-    this.models = new Array();
-    this.scenes = new Array();
-    this.flashes = new Array();
-    this.cameras = new Array();
+    this.models = new Array<PoligonalModel>();
+    this.scenes = new Array<Scene>();
+    this.flashes = new Array<Flash>();
+    this.cameras = new Array<Camera>();
   }
 
   public getScena(id: number) {
@@ -29,7 +29,7 @@ export class ModelStore implements iModelChanger {
     return null;
   }
 
-  NotifyChange(sender: iModelChanger): void {
+  NotifyChange(sender: IModelChanger): void {
     throw new Error("Method not implemented.");
   }
 }
