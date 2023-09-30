@@ -4,7 +4,9 @@
   "description": "GB architecture course but using TypeScript",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc ./src/index.ts --outdir dist --target es2015",
+    "build": "rm -rf public/scripts && tsc",
+    "_build": "tsc ./src/index.ts --outdir dist --target es2015",
+    "build:dev": "rm -rf public/scripts && tsc public/scripts --watch -p tsconfig-dev.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
