@@ -10,6 +10,17 @@ export class Camera {
     this.angle = angle;
   }
 
+  /**
+   * Поворот камеры на угол
+   * 
+   * @param angle 
+   */
   public rotate(angle: Angle3D): void { };
+
+  /**
+   * Перемещение камеры к точке
+   * 
+   * @param point 
+   */
   public move(point: Point3D): void { };
 }
