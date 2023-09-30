@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "public/scripts",
+    "target": "ES2015",
+    "module": "ES2015",
+    "moduleResolution": "Node"
+  },
+  "files": [
+    "src/index.ts"
+  ],
+  "include": [
+    "src/InMemoryModel/*",
+    "src/ModelElements/*",
+    "src/Stuff/*"
+  ]
+}
