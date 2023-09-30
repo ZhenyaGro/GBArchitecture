@@ -1,9 +1,9 @@
 import { Point3D } from "../Stuff/Point3D";
 
 export class Poligon {
-  public points: Array<Point3D>;
+  public points = new Array<Point3D>();
 
-  constructor() {
-    this.points = new Array();
+  constructor(point: Point3D) {
+    this.points.push(point);
   }
 }
