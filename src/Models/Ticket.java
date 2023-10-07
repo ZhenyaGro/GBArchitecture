@@ -6,7 +6,17 @@ import java.util.Date;
  * Модель билета
  */
 public class Ticket{
-
+    private long id;
+    private Date date;
+    private int routeNumber;
+    private int zoneStart;
+    private int zoneStop;
+    private int price;
+    private Date timeStart;
+    private Date timeStop;
+    private boolean isValid;
+    private boolean isUsed;
+    private int place;
 
 
     public Ticket(int routeNumber, int place, int price, Date date, boolean isValid) {
@@ -15,6 +25,43 @@ public class Ticket{
         this.price = price;
         this.date = date;
         this.isValid = isValid;
+    }
+
+
+    public int getRoutNumber(){
+        return this.routeNumber;
+    }
+
+    public int getPlace(){
+        return this.place;
+    }
+
+    public int getPrice(){
+        return this.price;
+    }
+
+    public Date getDate(){
+        return this.date;
+    }
+
+    public boolean getValid(){
+        return this.isValid;
+    }
+
+    public void setValid(boolean isValid){
+        this.isValid = isValid;
+    }
+
+    public void setUsed(boolean isUsed){
+        this.isUsed = isUsed;
+    }
+
+    public void setZoneStart(int zoneStart){
+        this.zoneStart = zoneStart;
+    }
+
+    public void setZoneStop(int zoneEnd){
+        this.zoneEnd = zoneEnd;
     }
 
 

@@ -6,7 +6,12 @@ import java.util.Objects;
  * Модель пользователя
  */
 public class User {
-
+    private int id;
+    private String userName;
+    private String passportData;
+    private Date birnDate;
+    private long cardNumber;
+    private int hashPassword; 
 
 
     public User(int id, String userName, int hashPassword, long cardNumber) {
@@ -14,6 +19,31 @@ public class User {
         this.userName = userName;
         this.hashPassword = hashPassword;
         this.cardNumber = cardNumber;
+    }
+
+    
+    public int getId(){
+        return this.id;
+    }
+
+    public String getUserName(){
+        return this.userName;
+    }
+
+    public int getHashPassword(){
+        return this.hashPassword;
+    }
+
+    public void setHashPassword(int newHashPassword){
+        this.hashPassword = newHashPassword;
+    }
+
+    public long getCardNumber(){
+        return this.cardNumber;
+    }
+
+    public void setUserName(String newUserName){
+        this.userName = newUserName;
     }
 
 
